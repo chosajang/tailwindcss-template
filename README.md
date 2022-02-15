@@ -32,4 +32,3 @@ Available on:
 이 프로젝트는 gitlab에서 github으로 미러링하고 있습니다.
 - gitlab : https://gitlab.com/chosajang/tailwindcss-template.git
 - github : https://github.com/chosajang/tailwindcss-template.git
-
