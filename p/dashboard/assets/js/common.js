@@ -1,0 +1,1 @@
+const documentRoot = '/p/dashboard/';
