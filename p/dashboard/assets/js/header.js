@@ -14,13 +14,16 @@ const headerHTML = `
 
 <!--// Web:Menu -->
 <div id="navigation" class="hidden md:flex flex-grow items-center text-left text-sm z-11 pl-4">
-    <span class="mr-4 text-xs"> todo : selectbox 추가</span>
+    <div class="mr-4 p-2 cursor-pointer rounded hover:text-white hover:bg-slate-500 duration-200">
+        <i class="fa-solid fa-layer-group text-sm"></i>
+        <span class="ml-1 text-xs">Menu</span>
+    </div>
 </div>
 
 <!--// personal menu -->
 <div class="flex flex-none items-center px-4 z-12">
 <!--  <span class="text-sm text-gray-800 mr-4">|</span>-->
-  <div id="personal-info" class="flex mr-2 px-1 items-center cursor-pointer rounded-sm border-transparent border-2 hover:border-slate-500 hover:bg-slate-500">
+  <div id="personal-info" class="flex mr-2 px-1 items-center cursor-pointer rounded border-transparent border-2 hover:border-slate-500 hover:bg-slate-500 duration-200">
     <span class="text-xs font-bold mr-4">Jonny</span>
     <!--<i class="fas fa-cog text-sm"></i>-->
     <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-gray-300" alt="profile">
@@ -36,7 +39,7 @@ const headerHTML = `
 document.addEventListener("DOMContentLoaded", function(){
   let header = document.getElementById('header');
   header.classList.add('sticky', 'top-0', 'z-50', 'flex', 'flex-none', 'w-full', 'h-12');
-  header.classList.add('bg-slate-700','text-white');
+  header.classList.add('bg-slate-700','text-slate-200');
   header.innerHTML = headerHTML;
   
   // 헤더 : 개인 메뉴
