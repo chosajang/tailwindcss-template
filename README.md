@@ -8,7 +8,10 @@
 ## 프로젝트 설정
 ### git 프로젝트 복사
 ```shell
-$ git clone {git 주소}
+# gitlab/github clone
+# gitlab : https://gitlab.com/chosajang/tailwindcss-template.git
+# github : https://github.com/chosajang/tailwindcss-template.git
+$ git clone https://gitlab.com/chosajang/tailwindcss-template.git
 
 $ cd tailwindcss-template
 ```
