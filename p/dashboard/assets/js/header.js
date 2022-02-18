@@ -1,13 +1,13 @@
 const headerHTML = `
 <!--// Mobile : sidebar toggle -->
-<div id="aside-toggle" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer hover:text-blue-500 border-transparent border-2 hover:border-gray-200 hover:bg-gray-200 duration-100">
+<div id="aside-toggle" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer border-transparent border-2 hover:border-slate-600 hover:bg-slate-600 duration-200">
   <i id="aside-icon" class="fas fa-bars text-xl w-5"></i>
 </div>
 
 <!--// Site Logo -->
 <div class="flex flex-grow md:flex-none items-center z-10 w-52">
   <a href="#" class="flex m-auto text items-center font-semibold tracking-widest uppercase focus:outline-none focus:shadow-outline">
-    <img class="w-8 h-8 mr-2" src="${documentRoot}assets/images/resources.png" alt="Site Logo" />
+    <img class="w-8 h-8 mr-2" src="${documentRoot}assets/images/planets.png" alt="Site Logo" />
     Dashboard
   </a>
 </div>
@@ -21,14 +21,14 @@ const headerHTML = `
 </div>
 
 <!--// personal menu -->
-<div class="flex flex-none items-center px-4 z-12">
+<div class="flex flex-none items-center pr-2 md:px-4 z-12">
 <!--  <span class="text-sm text-gray-800 mr-4">|</span>-->
-  <div id="personal-info" class="flex mr-2 px-1 items-center cursor-pointer rounded border-transparent border-2 hover:border-slate-500 hover:bg-slate-500 duration-200">
-    <span class="text-xs font-bold mr-4">Jonny</span>
+  <div id="personal-info" class="flex flex-none px-1 items-center cursor-pointer rounded border-transparent border-2 hover:border-slate-600 hover:bg-slate-600 duration-200">
+    <span class="hidden md:flex text-xs font-bold mr-4">Jonny</span>
     <!--<i class="fas fa-cog text-sm"></i>-->
     <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-gray-300" alt="profile">
   </div>
-  <div id="personal-menu" class="fixed hidden top-11 right-1 w-40 rounded-sm bg-white z-20 border border-top-none border-solid border-gray-300">
+  <div id="personal-menu" class="fixed hidden top-12 right-2 w-40 rounded-sm bg-white shadow z-20 border border-top-none border-solid border-gray-300">
     <ul class="w-full text-sm select-none text-slate-900">
       <li class="pl-2 py-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-user-circle"></i> Profile</li>
       <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-sign-out-alt"></i> Logout</li></a>

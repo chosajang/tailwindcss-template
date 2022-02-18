@@ -10,8 +10,8 @@ const asideHTML = `
 <div>
   <ul class="select-none mt-4" id="menu-ext">
 <!--    <li class="pt-4 py-2 pl-4"><p class="text-xs font-bold text-gray-300">기본 메뉴</p></li>-->
-    <a href="${documentRoot}"><li class="py-3 pl-4 text-xs cursor-pointer hover:text-slate-900 hover:bg-slate-300"><i class="fas fa-columns w-4 mr-2"></i>대시보드</li></a>
-    <li class="py-3 pl-4 text-xs cursor-pointer hover:text-slate-900 hover:bg-slate-300"><i class="fas fa-users w-4 mr-2"></i>계정관리</li>
+    <a href="${documentRoot}"><li class="py-3 pl-4 text-xs cursor-pointer hover:text-slate-900 hover:bg-slate-300 border-r-4 border-transparent hover:border-blue-500 "><i class="fas fa-columns w-4 mr-2"></i>대시보드</li></a>
+    <li class="py-3 pl-4 text-xs cursor-pointer hover:text-slate-900 hover:bg-slate-300 border-r-4 border-transparent hover:border-blue-500 "><i class="fas fa-users w-4 mr-2"></i>계정관리</li>
     <ul>
       <li class="py-2 pl-6 hover:text-slate-900 cursor-pointer hover:bg-slate-300">test</li>
       <li class="py-2 pl-6 hover:text-slate-900 cursor-pointer hover:bg-slate-300">test</li>
