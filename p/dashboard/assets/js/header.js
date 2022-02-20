@@ -31,15 +31,16 @@ const headerHTML = `
   <div id="personal-menu" class="hidden">
     <!-- Web -->
     <div class="invisible sm:visible fixed top-12 right-2 w-40 rounded-sm bg-white shadow z-20 border border-top-none border-solid border-gray-300">
-        <ul class="w-full text-sm select-none text-slate-900">
+      <ul class="w-full text-sm select-none text-slate-900">
         <li class="pl-2 py-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-user-circle"></i> Profile</li>
         <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
     <!-- Mobile -->
-    <div class="visible sm:insivible fixed top-12 left-0 w-full bg-white text-slate-700">
+    <div class="visible sm:invisible fixed top-12 left-0 w-full bg-white text-slate-700">
       <ul class="select-none">
-        <li><i class="fas fa-user-circle"></i> Profile</li>
+        <li class="p-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-user-circle"></i> Profile</li>
+        <li class="p-2 cursor-pointer hover:bg-blue-400 hover:text-white"><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
     </div>
   </div>
