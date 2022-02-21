@@ -1,6 +1,6 @@
 # Tailwind CSS Template
 
-- 사용기술 : HTML5, Javascript, Tailwind CSS 2.x, Font Awesome 5.x Free
+- 사용기술 : HTML5, Javascript, Tailwind CSS 3.x, Font Awesome 6.x Free
 
 ## 개발환경 설정
 - 개발 PC에 Git, NPM, Yarn 설치 필요
