@@ -52,7 +52,7 @@
           <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Border</p></div>
           <!-- Card -->
           <div class="text-base">
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('border','border-none')">None</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('border','border-transparent')">None</button>
             <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-solid')">Solid</button>
             <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-dashed')">Dashed</button>
           </div>
@@ -66,15 +66,15 @@
 <script>
   const layoutChange = (style, option) => {
     const contentObj = document.getElementById('content-wrap')
-    if( style == 'size') {
+    if( style === 'size') {
       contentObj.classList.remove('max-w-full')
       contentObj.classList.remove('max-w-screen-lg')
       contentObj.classList.remove('max-w-screen-xl')
-      if( option != 'default' ) {
+      if( option !== 'default' ) {
         contentObj.classList.add(option)
       }
-    } else if( style == 'border') {
-      contentObj.classList.remove('border-none')
+    } else if( style === 'border') {
+      contentObj.classList.remove('border-transparent')
       contentObj.classList.remove('border-solid')
       contentObj.classList.remove('border-dashed')
       
