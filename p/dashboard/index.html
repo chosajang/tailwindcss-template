@@ -7,56 +7,82 @@
   <script src="https://cdn.tailwindcss.com"></script>
   <title>Dashboard</title>
   <link rel="icon" href="/p/dashboard/assets/images/planets.ico">
-  <!--// Layout JS -->
+  <!-- Layout JS -->
   <script src="./assets/js/common.js"></script>
   <script src="./assets/js/header.js" defer ></script>
   <script src="./assets/js/sidebar.js" defer ></script>
 </head>
 <body class="w-full font-sans">
-<!--// // Header : ST -->
-<header id="header"></header>
-<!--// // Header : ED -->
+  <header id="header"></header>
 
-<!--// Main : ST -->
-<main class="w-full">
-  <!--// Sidebar : ST -->
-  <aside id="aside-menu"></aside>
-  <!--// Sidebar : ST -->
-
-  <!--// Contents : ST -->
-  <div class="md:ml-52">
-    <div class="container border border-dashed bg-white m-auto px-4 md:px-6" id="content-wrap">
-      <!--// Breadcrumb -->
-      <div class="py-4 border-b">
-        <nav class="text-xs text-slate-700">
-          <ul>
-            <li>Dashboard</li>
-          </ul>
-        </nav>
-      </div>
-      <!--// Title -->
-      <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Size</p></div>
-
-      <div class="text-base">
-        <button class="rounded flex shadow bg-blue-500 px-6 py-1 text-white hover:bg-blue-600" onclick="layoutChange('default')">X-Wide(1536px)</button>
-        <button class="rounded flex shadow bg-green-500 px-6 py-1 text-white hover:bg-green-600 mt-4" onclick="layoutChange('max-w-screen-xl')">Wide(1280px)</button>
-        <button class="rounded flex shadow bg-blue-500 px-6 py-1 text-white hover:bg-blue-600 mt-4" onclick="layoutChange('max-w-screen-lg')">Readable(1024px)</button>
-      </div>
-
-    </div><!--// <div class="container m-auto p-4 md:p-6"> -->
-  </div><!--// Contents : ED -->
-
-</main><!--// Main : ED -->
+  <!-- Main : ST -->
+  <main class="w-full min-h-full">
+    <!-- Sidebar : ST -->
+    <aside id="aside-menu"></aside>
+    <!-- Sidebar : ST -->
+  
+    <!-- Contents : ST -->
+    <div class="md:ml-52">
+      <div class="container border border-dashed bg-white m-auto px-4 py-4 md:px-6 duration-300" id="content-wrap">
+        <!-- Breadcrumb -->
+        <div class="py-2 border-b">
+          <nav class="text-xs text-slate-700">
+            <ul>
+              <li>Dashboard</li>
+            </ul>
+          </nav>
+        </div>
+        
+        <!-- Content Size -->
+        <div class="py-2">
+          <!-- Title -->
+          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Size</p></div>
+          <!-- Card -->
+          <div class="text-base">
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('size','max-w-full')">Full Size(100%)</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','default')">X-Wide(1536px)</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-xl')">Wide(1280px)</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-lg')">Readable(1024px)</button>
+          </div>
+        </div>
+        
+        <!-- Content Border -->
+        <div class="py-2">
+          <!-- Title -->
+          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Border</p></div>
+          <!-- Card -->
+          <div class="text-base">
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('border','border-none')">None</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-solid')">Solid</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-dashed')">Dashed</button>
+          </div>
+        </div>
+        
+      </div><!--// <div class="container m-auto p-4 md:p-6"> -->
+    </div><!--// Contents : ED -->
+  
+  </main><!--// Main : ED -->`
 </body>
 <script>
-  const layoutChange = (option) => {
+  const layoutChange = (style, option) => {
     const contentObj = document.getElementById('content-wrap')
-
-    contentObj.classList.remove('max-w-screen-lg')
-    contentObj.classList.remove('max-w-screen-xl')
-    if( option != 'default' ) {
+    if( style == 'size') {
+      contentObj.classList.remove('max-w-full')
+      contentObj.classList.remove('max-w-screen-lg')
+      contentObj.classList.remove('max-w-screen-xl')
+      if( option != 'default' ) {
+        contentObj.classList.add(option)
+      }
+    } else if( style == 'border') {
+      contentObj.classList.remove('border-none')
+      contentObj.classList.remove('border-solid')
+      contentObj.classList.remove('border-dashed')
+      
       contentObj.classList.add(option)
     }
+    
+  
+    
   }
 </script>
 </html>
