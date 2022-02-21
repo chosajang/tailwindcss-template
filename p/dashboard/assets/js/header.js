@@ -49,7 +49,7 @@ const headerHTML = `
 document.addEventListener("DOMContentLoaded", function(){
   let header = document.getElementById('header');
   header.classList.add('sticky', 'top-0', 'z-50', 'flex', 'flex-none', 'w-full', 'h-12');
-  header.classList.add('bg-white','text-slate-800','border-b','border-slate-200');
+  header.classList.add('bg-white','text-slate-700','border-b','border-slate-200');
   header.innerHTML = headerHTML;
   
   // 개인 메뉴
