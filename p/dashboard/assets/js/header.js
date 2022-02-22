@@ -1,6 +1,6 @@
 const headerHTML = `
 <!--// Mobile : sidebar toggle -->
-<div id="aside-toggle" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer border-transparent border-2 hover:text-sky-600 hover:border-sky-50 hover:bg-sky-50 duration-200">
+<div id="aside-toggle" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer border-transparent border-2 hover:text-sky-600 duration-200">
   <i id="aside-icon" class="fas fa-bars text-xl w-5"></i>
 </div>
 
