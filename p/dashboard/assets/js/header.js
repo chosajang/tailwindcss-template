@@ -30,7 +30,7 @@ const headerHTML = `
   </div>
   <div id="personal-menu" class="hidden">
     <!-- Web -->
-    <div class="invisible sm:visible fixed top-12 right-2 w-40 rounded-sm bg-white shadow z-20 border border-top-none border-solid border-gray-300">
+    <div class="invisible sm:visible fixed top-11 right-2 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
