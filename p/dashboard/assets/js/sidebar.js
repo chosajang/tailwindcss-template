@@ -1,20 +1,44 @@
 const asideHTML = `
 <!-- Left Menu : ST -->
-<div class="overflow-y-auto overflow-x-hidden">
-  <ul class="select-none mt-4" id="menu-ext">
-    <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500"><i class="fas fa-columns w-4 mr-2"></i>대시보드</li>
+<div class="overflow-x-hidden">
+  <ul class="select-none mt-4" id="sidebar">
     <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
-      <span><i class="fas fa-users w-4 mr-2"></i>계정관리</span>
+      <span><i class="fas fa-columns w-4 mr-2"></i>대시보드</span>
       <!-- 하위 메뉴 -->
-      <div class="hidden fixed left-52 top-24 w-52 h-10 m-1 p-2 bg-white border border-slate-200 shadow-lg">
-        TEST
+      <div class="hidden fixed left-52 top-12 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+        <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">대시보드</div>
+        <ul class="m-1">
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">대시보드 타입 1</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">대시보드 타입 2</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">대시보드 타입 3</li>
+        </ul>
       </div>
     </li>
-    <ul>
-      <li class="py-2 pl-6 cursor-pointer hover:bg-sky-50 hover:text-sky-600">test</li>
-      <li class="py-2 pl-6 cursor-pointer hover:bg-sky-50 hover:text-sky-600">test</li>
-      <li class="py-2 pl-6 cursor-pointer hover:bg-sky-50 hover:text-sky-600">test</li>
-    </ul>
+    <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+      <span><i class="fa-solid fa-server w-4 mr-2"></i>자원관리</span>
+      <!-- 하위 메뉴 -->
+      <div class="hidden fixed left-52 top-16 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+        <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">자원 관리</div>
+        <ul class="m-1">
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">서버 관리</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">IDC 관리</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">렉 관리</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">스위치 관리</li>
+        </ul>
+      </div>
+    </li>
+    <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+      <span><i class="fa-solid fa-cubes w-4 mr-2"></i>컴포넌트</span>
+      <!-- 하위 메뉴 -->
+      <div class="hidden fixed left-52 top-28 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+        <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">컴포넌트</div>
+        <ul class="m-1">
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">컴포넌트 1</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">컴포넌트 2</li>
+          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">컴포넌트 3</li>
+        </ul>
+      </div>
+    </li>
   </ul>
 </div>
 <!-- Left Menu : ED -->
@@ -32,36 +56,35 @@ document.addEventListener("DOMContentLoaded", function(){
   asideObj.classList.add('border-r-[1px]','border-slate-200');
   asideObj.innerHTML = asideHTML;
 
-  let focusMenuObj = null;
-  const liList = document.getElementById('menu-ext').querySelectorAll("li");
+  const liList = document.querySelectorAll("#sidebar > li");
+
+  let prevChildMenuObj = null;
   // 메뉴 마우스 오버 시, 하위 메뉴 팝업
   liList.forEach( liObj => {
     liObj.addEventListener('mouseenter', () => {
       const extObj = liObj.querySelector('div');
-      if(extObj !== null ){
-        extObj.classList.remove('hidden');
-      }
-    });
-    liObj.addEventListener('mouseleave', () => {
-      const extObj = liObj.querySelector('div');
-      // if(extObj !== null ){
-      //   extObj.addEventListener('mouseenter', () => {
-      //
-      //   });
-      //
-      //   extObj.classList.toggle('hidden');
-      // }
-    });
-  });
 
-  // 메뉴 펼침/닫힘 이벤트
-  liList.forEach( liObj => {
-    liObj.addEventListener('click', () => {
-      const extMenuObj = document.getElementById(liObj.getAttribute('for'));
-      if(extMenuObj != null ){
-        extMenuObj.classList.toggle('hidden');
-        const iObj = liObj.children[1].querySelector("i")
-        iObj.classList.toggle('rotate-90');
+      // 이전 하위 메뉴 객체 체크
+      if(prevChildMenuObj !== null) {
+        prevChildMenuObj.classList.add('hidden');
+      }
+
+      // 하위 요소 체크
+      if(extObj !== null ){
+        // 하위 메뉴가 있는 경우 보이기
+        extObj.classList.remove('hidden');
+
+        //
+        liObj.addEventListener('mouseleave', () => {
+          extObj.classList.add('hidden');
+        });
+
+        // 하위 메뉴에서 마우스 벗어나면 메뉴 가리기
+        extObj.addEventListener('mouseleave', () => {
+          extObj.classList.add('hidden');
+        });
+
+        prevChildMenuObj = extObj;
       }
     });
   });
