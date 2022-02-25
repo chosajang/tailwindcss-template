@@ -83,7 +83,8 @@ document.addEventListener("DOMContentLoaded", function(){
         // 1차 메뉴 마우스 아웃 이벤트
         liObj.addEventListener('mouseleave',() => {
           parentMenuFocus = false;
-          setTimeout(menuEvent, 500);
+          // 하위 메뉴 접근 판단을 위해 딜레이 타임 후, 상태 체크
+          setTimeout(menuEvent, 300);
         });
 
         // 2차 메뉴 마우스 오버 이벤트
