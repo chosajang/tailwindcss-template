@@ -57,37 +57,58 @@ document.addEventListener("DOMContentLoaded", function(){
   asideObj.innerHTML = asideHTML;
 
   const liList = document.querySelectorAll("#sidebar > li");
+  const sidebarObj = document.getElementById("sidebar").parentElement;
 
-  let prevChildMenuObj = null;
+
+  let parentMenuFocus = false;
+  let childMenuFocus = false;
+  let parentChildObj = null;
+  let prevChildObj = null;
   // 메뉴 마우스 오버 시, 하위 메뉴 팝업
   liList.forEach( liObj => {
     liObj.addEventListener('mouseenter', () => {
-      const extObj = liObj.querySelector('div');
+      parentChildObj = liObj.querySelector('div');
+      parentMenuFocus = true;
 
       // 이전 하위 메뉴 객체 체크
-      if(prevChildMenuObj !== null) {
-        prevChildMenuObj.classList.add('hidden');
+      if(prevChildObj !== null) {
+        prevChildObj.classList.add('hidden');
       }
 
       // 하위 요소 체크
-      if(extObj !== null ){
+      if(parentChildObj !== null ){
         // 하위 메뉴가 있는 경우 보이기
-        extObj.classList.remove('hidden');
+        parentChildObj.classList.remove('hidden');
 
-        //
-        liObj.addEventListener('mouseleave', () => {
-          extObj.classList.add('hidden');
+        // 1차 메뉴 마우스 아웃 이벤트
+        liObj.addEventListener('mouseleave',() => {
+          parentMenuFocus = false;
+          setTimeout(menuEvent, 500);
         });
 
-        // 하위 메뉴에서 마우스 벗어나면 메뉴 가리기
-        extObj.addEventListener('mouseleave', () => {
-          extObj.classList.add('hidden');
+        // 2차 메뉴 마우스 오버 이벤트
+        parentChildObj.addEventListener('mouseenter', () => {
+          childMenuFocus = true;
         });
 
-        prevChildMenuObj = extObj;
+        // 2차 메뉴에서 마우스 아웃 이벤트
+        parentChildObj.addEventListener('mouseleave', () => {
+          parentChildObj.classList.add('hidden');
+          childMenuFocus = false;
+        });
+
+        prevChildObj = parentChildObj;
+      } else {
+        prevChildObj = null;
       }
     });
   });
+
+  let menuEvent = () => {
+    if(prevChildObj !== null && parentMenuFocus === false && childMenuFocus === false){
+      prevChildObj.classList.add('hidden');
+    }
+  };
 
   // 주소기반 메뉴 포커스
   const currentUrl = window.location.href;
