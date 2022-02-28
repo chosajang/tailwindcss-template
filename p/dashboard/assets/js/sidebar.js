@@ -1,6 +1,6 @@
 const asideHTML = `
 <!-- Left Menu : ST -->
-<div class="overflow-x-hidden">
+<div class="min-h-max overflow-x-hidden">
   <ul class="select-none mt-4" id="sidebar">
     <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <span><i class="fas fa-columns w-4 mr-2"></i>대시보드</span>
@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function(){
         liObj.addEventListener('mouseleave',() => {
           parentMenuFocus = false;
           // 하위 메뉴 접근 판단을 위해 딜레이 타임 후, 상태 체크
-          setTimeout(menuEvent, 300);
+          setTimeout(menuEvent, 200);
         });
 
         // 2차 메뉴 마우스 오버 이벤트
