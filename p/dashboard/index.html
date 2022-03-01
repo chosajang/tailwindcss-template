@@ -22,8 +22,8 @@
     <!-- Sidebar : ST -->
   
     <!-- Contents : ST -->
-    <div class="md:ml-52">
-      <div class="container border border-dashed bg-white m-auto px-4 py-4 md:px-6 duration-300" id="content-wrap">
+    <div id="content-wrapper" class="duration-200 md:ml-52">
+      <div class="container border border-dashed bg-white m-auto px-4 py-4 md:px-6 duration-300" id="contents">
         <!-- Breadcrumb -->
         <div class="py-2 border-b">
           <nav class="text-xs text-slate-700">
@@ -40,7 +40,7 @@
           <!-- Card -->
           <div class="text-base">
             <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('size','max-w-full')">Full Size(100%)</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','default')">X-Wide(1536px)</button>
+            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-2xl')">X-Wide(1536px)</button>
             <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-xl')">Wide(1280px)</button>
             <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-lg')">Readable(1024px)</button>
           </div>
@@ -65,14 +65,13 @@
 </body>
 <script>
   const layoutChange = (style, option) => {
-    const contentObj = document.getElementById('content-wrap')
+    const contentObj = document.getElementById('contents')
     if( style === 'size') {
       contentObj.classList.remove('max-w-full')
       contentObj.classList.remove('max-w-screen-lg')
       contentObj.classList.remove('max-w-screen-xl')
-      if( option !== 'default' ) {
-        contentObj.classList.add(option)
-      }
+      
+      contentObj.classList.add(option)
     } else if( style === 'border') {
       contentObj.classList.remove('border-transparent')
       contentObj.classList.remove('border-solid')
