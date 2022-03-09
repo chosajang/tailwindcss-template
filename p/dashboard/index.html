@@ -26,7 +26,7 @@
     <div id="content-wrapper" class="duration-200 md:ml-52">
       <div class="container border border-dashed bg-white m-auto px-4 py-4 md:px-6 duration-300" id="contents">
         <!-- Breadcrumb -->
-        <div class="py-2 border-b">
+        <div class="py-2 border-b cols-span-12">
           <nav class="text-xs text-slate-700">
             <ul>
               <li>Dashboard</li>
@@ -34,35 +34,38 @@
           </nav>
         </div>
         
-        <!-- Content Size -->
-        <div class="py-2">
-          <!-- Title -->
-          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Size</p></div>
-          <!-- Card -->
-          <div class="text-base">
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('size','max-w-full')">Full Size(100%)</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-2xl')">X-Wide(1536px)</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-xl')">Wide(1280px)</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-lg')">Readable(1024px)</button>
+        <!-- Content -->
+        <div class="py-2 grid grid-cols-12 gap-4">
+          <!-- Content Size -->
+          <div class="col-span-12 md:col-span-6">
+            <!-- Title -->
+            <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Size</p></div>
+            <!-- Card -->
+            <div class="text-base">
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('size','max-w-full')">Full Size(100%)</button>
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-2xl')">X-Wide(1536px)</button>
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-xl')">Wide(1280px)</button>
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('size','max-w-screen-lg')">Readable(1024px)</button>
+            </div>
           </div>
-        </div>
-        
-        <!-- Content Border -->
-        <div class="py-2">
-          <!-- Title -->
-          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Border</p></div>
-          <!-- Card -->
-          <div class="text-base">
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('border','border-transparent')">None</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-solid')">Solid</button>
-            <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-dashed')">Dashed</button>
+  
+          <!-- Content Border -->
+          <div class="col-span-12 md:col-span-6">
+            <!-- Title -->
+            <div class="border-b mb-4 py-2"><p class="text-base font-bold">Content Border</p></div>
+            <!-- Card -->
+            <div class="text-base">
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600" onclick="layoutChange('border','border-transparent')">None</button>
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-solid')">Solid</button>
+              <button class="rounded flex shadow bg-sky-500 px-6 py-1 text-white hover:bg-sky-600 mt-4" onclick="layoutChange('border','border-dashed')">Dashed</button>
+            </div>
           </div>
         </div>
 
         <!-- HighCharts -->
         <div class="py-2">
           <!-- Title -->
-          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Chart Sampel</p></div>
+          <div class="border-b mb-4 py-2"><p class="text-base font-bold">Chart Sample</p></div>
           <!-- Card -->
           <div id="charts-sample01" class="w-full"></div>
         </div>
