@@ -4,6 +4,7 @@
 
 ## 개발환경 설정
 - 개발 PC에 Git, NPM, Yarn 설치 필요
+    - [설치안내](./doc/Settings(git,node,yarn).md)
 
 ## 프로젝트 설정
 ### git 프로젝트 복사
