@@ -53,13 +53,13 @@ const asideHTML = `
  * DOM 트리 완성 후 실행
  */
 document.addEventListener("DOMContentLoaded", function(){
-  const asideObj = document.getElementById("aside-menu");
-  asideObj.classList.add("fixed","top-0","left-0","z-10","w-52","h-screen","pt-12");
-  asideObj.classList.add("bg-white","text-slate-700","text-sm");
-  asideObj.classList.add("items-center","flex-row","flex-no-wrap",);
-  asideObj.classList.add("transform","-translate-x-52","md:translate-x-0","ease-out","duration-200");
-  asideObj.classList.add("border-r-[1px]","border-slate-200");
-  asideObj.innerHTML = asideHTML;
+  const sidebar = document.getElementById("sidebar");
+  sidebar.classList.add("fixed","top-0","left-0","z-10","w-52","h-screen","pt-12");
+  sidebar.classList.add("bg-white","text-slate-700","text-sm");
+  sidebar.classList.add("items-center","flex-row","flex-no-wrap",);
+  sidebar.classList.add("transform","-translate-x-52","md:translate-x-0","ease-out","duration-200");
+  sidebar.classList.add("border-r-[1px]","border-slate-200");
+  sidebar.innerHTML = asideHTML;
 
   const liList = document.querySelectorAll("#sidebar-wrapper > ul > li");
 
@@ -135,8 +135,8 @@ document.addEventListener("DOMContentLoaded", function(){
     contentWrapperObj.classList.toggle("md:ml-52");
     contentWrapperObj.classList.toggle("md:ml-12");
     // 사이드바 크기 조절
-    asideObj.classList.toggle("w-52");
-    asideObj.classList.toggle("w-12");
+    sidebar.classList.toggle("w-52");
+    sidebar.classList.toggle("w-12");
     // 사이드바 2차 메뉴 위치 조절
     sidebarChildListObj.forEach(childMenuObj => {
       childMenuObj.classList.toggle("left-52");
