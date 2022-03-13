@@ -52,22 +52,25 @@ const headerHTML = `
     <div class="visible md:invisible fixed top-0 left-0 w-full bg-white border-b z-20">
       <!-- Tab Menu : Reverse Range -->
       <div class="flex flex-row-reverse border-b border-slate-200">
-        <div id="btn-gnb-group-exit" class="h-12 flex items-center text-center px-4 cursor-pointer">
+        <!-- Close -->
+        <div id="btn-gnb-group-exit" class="h-12 flex items-center text-center px-4 cursor-pointer hover:text-sky-600 duration-200">
           <i class="fas fa-times text-xl"></i>
         </div>
-        
-        <div id="btn-personal-mobile" class="h-12 flex items-center text-center px-4 cursor-pointer">
+        <!-- Personal -->
+        <div id="btn-personal-mobile" class="h-12 flex items-center text-center px-2 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
           <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
         </div>
-        
-        <div id="btn-project-navigation-mobile" class="h-12 flex items-center text-center px-4 cursor-pointer">
+        <!-- Projects -->
+        <div id="btn-project-navigation-mobile" class="h-12 flex items-center text-center px-4 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
           <i class="fa-solid fa-layer-group w-5"></i>
         </div>
       </div>
+      <!-- Personal Menu -->
       <ul class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
+      
     </div>
   </div>
 </div>`;
