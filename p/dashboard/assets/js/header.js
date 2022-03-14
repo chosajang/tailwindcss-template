@@ -5,7 +5,7 @@ const headerHTML = `
 </div>
 
 <!--// Site Logo -->
-<div class="flex flex-grow md:flex-none items-center z-10 w-52">
+<div class="flex flex-auto md:flex-none items-center z-10 md:w-52">
   <a href="#" class="flex m-auto text items-center font-semibold tracking-widest uppercase focus:outline-none focus:shadow-outline">
     <img class="w-8 h-8 mr-2" src="${documentRoot}assets/images/planets.png" alt="Site Logo" />
     Dashboard
@@ -13,17 +13,17 @@ const headerHTML = `
 </div>
 
 <!-- Project Navigation Wrapper -->
-<div class="hidden md:flex flex-grow items-center text-left text-sm z-11 pl-4">
+<div class="flex flex-initial md:flex-auto items-center z-11 md:pl-4">
   <!-- Project Navigation Button -->
-  <div id="btn-project-navigation" class="mr-4 p-2 cursor-pointer rounded hover:text-sky-600 hover:bg-sky-50 duration-200">
-    <i class="fa-solid fa-layer-group text-sm"></i>
-    <span class="ml-1 text-xs font-bold">Projects</span>
+  <div id="btn-project-navigation" class="mr-4 px-4 py-3 md:p-2 cursor-pointer rounded text-sm hover:text-sky-600 hover:bg-sky-50 duration-200">
+    <i class="fa-solid fa-layer-group md:text-sm"></i>
+    <span class="hidden md:inline-flex ml-1 text-xs font-bold">Projects</span>
   </div>
   
   <!-- Project Navigation -->
   <div id="project-navigation" class="hidden">
     <!-- Web -->
-    <div class="fixed top-11 left-52 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
+    <div class="fixed top-10 left-52 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Dashboard</li>
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
@@ -33,9 +33,9 @@ const headerHTML = `
 </div>
 
 <!-- personal menu -->
-<div class="flex flex-none items-center pr-2 md:px-4 z-12">
+<div class="flex flex-none items-center pr-2 md:px-4 z-12 h-12">
 <!--  <span class="text-sm text-gray-800 mr-4">|</span>-->
-  <div id="personal-info" class="flex flex-none py-1 px-2 items-center cursor-pointer rounded hover:text-sky-600 hover:bg-sky-50 duration-200">
+  <div id="personal-info" class="flex flex-none px-2 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
     <span class="hidden md:flex text-xs font-bold mr-4">Jonny</span>
     <!--<i class="fas fa-cog text-sm"></i>-->
     <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
@@ -53,31 +53,35 @@ const headerHTML = `
       <!-- Tab Menu : Reverse Range -->
       <div class="flex flex-row-reverse border-b border-slate-200">
         <!-- Close -->
-        <div id="btn-gnb-group-exit" class="h-12 flex items-center text-center px-4 cursor-pointer hover:text-sky-600 duration-200">
+        <div id="m-btn-gnb-exit" class="h-12 flex items-center text-center px-4 cursor-pointer hover:text-sky-600 duration-200">
           <i class="fas fa-times text-xl"></i>
         </div>
         <!-- Personal -->
-        <div id="btn-personal-mobile" class="h-12 flex items-center text-center px-2 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
+        <div id="m-btn-personal" class="h-12 flex items-center text-center px-2 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
           <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
         </div>
         <!-- Projects -->
-        <div id="btn-project-navigation-mobile" class="h-12 flex items-center text-center px-4 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
+        <div id="m-btn-project-navigation" class="h-12 flex items-center text-center px-4 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
           <i class="fa-solid fa-layer-group w-5"></i>
         </div>
       </div>
       <!-- Personal Menu -->
-      <ul class="select-none">
+      <ul id="personal-menu" class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
-      
+      <!-- Projects Menu -->
+      <ul id="m-projects-menu" class="hidden select-none">
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Dashboard</li>
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
+      </ul>
     </div>
   </div>
 </div>`;
 
 document.addEventListener("DOMContentLoaded", function(){
   let header = document.getElementById('header');
-  header.classList.add('sticky', 'top-0', 'z-50', 'flex', 'flex-none', 'w-full', 'h-12');
+  header.classList.add('sticky', 'top-0', 'z-50', 'flex', 'w-full', 'h-12');
   header.classList.add('bg-white','text-slate-700','border-b','border-slate-200');
   header.innerHTML = headerHTML;
 
@@ -95,8 +99,8 @@ document.addEventListener("DOMContentLoaded", function(){
     personalMenu.classList.toggle('hidden');
   });
 
-  const btnGnbGroupExit = document.getElementById('btn-gnb-group-exit');
-  btnGnbGroupExit.addEventListener('click',() => {
+  const mBtnGnbExit = document.getElementById('m-btn-gnb-exit');
+  mBtnGnbExit.addEventListener('click',() => {
     personalMenu.classList.toggle('hidden');
   });
 
