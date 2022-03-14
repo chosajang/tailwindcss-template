@@ -49,31 +49,11 @@ const headerHTML = `
       </ul>
     </div>
     <!-- Mobile -->
-    <div class="visible md:invisible fixed top-0 left-0 w-full bg-white border-b z-20">
-      <!-- Tab Menu : Reverse Range -->
-      <div class="flex flex-row-reverse border-b border-slate-200">
-        <!-- Close -->
-        <div id="m-btn-gnb-exit" class="h-12 flex items-center text-center px-4 cursor-pointer hover:text-sky-600 duration-200">
-          <i class="fas fa-times text-xl"></i>
-        </div>
-        <!-- Personal -->
-        <div id="m-btn-personal" class="h-12 flex items-center text-center px-2 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
-          <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
-        </div>
-        <!-- Projects -->
-        <div id="m-btn-project-navigation" class="h-12 flex items-center text-center px-4 mr-4 cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200">
-          <i class="fa-solid fa-layer-group w-5"></i>
-        </div>
-      </div>
+    <div class="visible md:invisible fixed top-12 left-0 w-full bg-white border-b z-20">
       <!-- Personal Menu -->
       <ul id="personal-menu" class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li>
-      </ul>
-      <!-- Projects Menu -->
-      <ul id="m-projects-menu" class="hidden select-none">
-        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Dashboard</li>
-        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
       </ul>
     </div>
   </div>
