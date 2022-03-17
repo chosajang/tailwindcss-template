@@ -1,6 +1,6 @@
 const headerHTML = `
 <!--// Mobile : Sidebar toggle -->
-<div id="btn-sidebar-mobile" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer border-transparent border-2 hover:text-sky-600 duration-200">
+<div id="btn-sidebar-toggle" class="flex flex-none md:hidden items-center text-center px-4 z-10 cursor-pointer border-transparent border-2 hover:text-sky-600 duration-200">
   <i id="aside-icon" class="fas fa-bars text-xl w-5"></i>
 </div>
 
@@ -13,20 +13,27 @@ const headerHTML = `
 </div>
 
 <!-- Project Navigation Wrapper -->
-<div class="flex flex-initial md:flex-auto items-center z-11 md:pl-4">
-  <!-- Project Navigation Button -->
-  <div id="btn-project-navigation" class="mr-4 px-4 py-3 md:p-2 cursor-pointer rounded text-sm hover:text-sky-600 hover:bg-sky-50 duration-200">
+<div class="flex flex-initial md:flex-auto items-center z-11 h-12">
+  <!-- Projects Menu Button -->
+  <div id="btn-projects-menu" class="flex flex-none px-4 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
     <i class="fa-solid fa-layer-group md:text-sm"></i>
     <span class="hidden md:inline-flex ml-1 text-xs font-bold">Projects</span>
   </div>
-  
-  <!-- Project Navigation -->
-  <div id="project-navigation" class="hidden">
+  <!-- Projects Menu -->
+  <div id="projects-menu" class="hidden">
     <!-- Web -->
-    <div class="fixed top-10 left-52 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
+    <div class="invisible md:visible fixed top-14 left-48 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Dashboard</li>
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
+      </ul>
+    </div>
+    <!-- mobile -->
+    <div class="visible md:invisible fixed top-12 left-0 w-full bg-white border-b z-20">
+      <!-- Personal Menu -->
+      <ul class="select-none">
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Resources</li>
       </ul>
     </div>
   </div>
@@ -35,23 +42,23 @@ const headerHTML = `
 <!-- personal menu -->
 <div class="flex flex-none items-center pr-2 md:px-4 z-12 h-12">
 <!--  <span class="text-sm text-gray-800 mr-4">|</span>-->
-  <div id="personal-info" class="flex flex-none px-2 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
+  <div id="btn-personal-menu" class="flex flex-none px-2 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
     <span class="hidden md:flex text-xs font-bold mr-4">Jonny</span>
     <!--<i class="fas fa-cog text-sm"></i>-->
     <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
   </div>
   <div id="personal-menu" class="hidden">
     <!-- Web -->
-    <div class="invisible md:visible fixed top-11 right-2 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
+    <div class="invisible md:visible fixed top-14 right-2 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
     <!-- Mobile -->
-    <div class="visible md:invisible fixed top-12 left-0 w-full bg-white border-b z-20">
+    <div class="visible md:invisible fixed top-12 left-0 w-full bg-white border-b z-20 duration-200">
       <!-- Personal Menu -->
-      <ul id="personal-menu" class="select-none">
+      <ul class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li>
       </ul>
@@ -66,36 +73,31 @@ document.addEventListener("DOMContentLoaded", function(){
   header.innerHTML = headerHTML;
 
   // 프로젝트 메뉴
-  const btnProjectNavigation = document.getElementById('btn-project-navigation');
-  const projectNavigation = document.getElementById('project-navigation');
-  btnProjectNavigation.addEventListener('click',() => {
-    projectNavigation.classList.toggle('hidden');
+  const btnProjectsMenu = document.getElementById('btn-projects-menu');
+  const projectsMenu = document.getElementById('projects-menu');
+  btnProjectsMenu.addEventListener('click',() => {
+    projectsMenu.classList.toggle('hidden');
   });
   
   // 개인 메뉴
-  const personalInfo = document.getElementById('personal-info');
+  const btnPersonalMenu = document.getElementById('btn-personal-menu');
   const personalMenu = document.getElementById('personal-menu');
-  personalInfo.addEventListener('click',() => {
-    personalMenu.classList.toggle('hidden');
-  });
-
-  const mBtnGnbExit = document.getElementById('m-btn-gnb-exit');
-  mBtnGnbExit.addEventListener('click',() => {
+  btnPersonalMenu.addEventListener('click',() => {
     personalMenu.classList.toggle('hidden');
   });
 
   // 사이드바 버튼
-  const asideToggleBtn = document.getElementById('btn-sidebar-mobile');
+  const btnSidebarToggle = document.getElementById('btn-sidebar-toggle');
   const sidebar = document.getElementById('sidebar');
   const asideIcon = document.getElementById('aside-icon')
-  asideToggleBtn.addEventListener('click', () => {
+  btnSidebarToggle.addEventListener('click', () => {
     sidebar.classList.toggle('-translate-x-52');
     sidebar.classList.toggle('md:translate-x-0');
     asideIcon.classList.toggle('fa-bars');
     asideIcon.classList.toggle('fa-times');
   });
 
-  // 브라우저 크기 변경 시, 토글 기능 초기화
+  // 브라우저 크기 변경 시, 사이드 토글 기능 초기화
   let timer = null;
   const timeout = 500;
   window.addEventListener('resize', () => {
