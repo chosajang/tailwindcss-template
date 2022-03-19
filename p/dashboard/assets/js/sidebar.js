@@ -5,7 +5,7 @@ const asideHTML = `
     <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fas fa-columns w-4 mr-2"></i><span>대시보드</span>
       <!-- 하위 메뉴 -->
-      <div class="hidden fixed left-52 top-12 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+      <div class="hidden fixed left-52 top-12 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
         <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">대시보드</div>
         <ul class="m-1">
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">대시보드 타입 1</li>
@@ -17,7 +17,7 @@ const asideHTML = `
     <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fa-solid fa-server w-4 mr-2"></i><span>자원관리</span>
       <!-- 하위 메뉴 -->
-      <div class="hidden fixed left-52 top-16 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+      <div class="hidden fixed left-52 top-16 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
         <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">자원 관리</div>
         <ul class="m-1">
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">서버 관리</li>
@@ -30,7 +30,7 @@ const asideHTML = `
     <li class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fa-solid fa-cubes w-4 mr-2"></i><span>컴포넌트</span>
       <!-- 하위 메뉴 -->
-      <div class="hidden fixed left-52 top-28 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded-lg shadow transition ease-in-out duration-200">
+      <div class="hidden fixed left-52 top-28 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
         <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">컴포넌트</div>
         <ul class="m-1">
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">컴포넌트 1</li>
