@@ -15,31 +15,41 @@
 <section class="w-full">
   
   <div class="min-h-screen flex flex-col">
-    <div class="mt-10 md:mt-32 px-2 md:px-0 mx-auto max-w-lg duration-200">
-      <div class="flex item-center justify-center">
-        <span class="font-bold text-center text-2xl mb-5">Login Form</span>
+    <div class="mt-10 md:mt-32 px-2 md:px-0 mx-auto max-w-md duration-200">
+      <div class="flex items-center justify-center mb-5">
+        <img class="w-10 h-10 mr-2" src="/p/dashboard/assets/images/planets.png" alt="Site Logo">
+        <span class="font-bold text-center text-2xl">Login Form</span>
       </div>
-      <div class="w-full py-4">
+      <div class="w-full">
+        <!-- Input ID -->
         <div class="mb-5">
-          <label class="font-semibold text-sm text-slate-700 pb-1 block">E-mail</label>
-          <input type="text" placeholder="ID" class="w-full px-3 py-2 mt-1 text-xl leading-tight text-slate-700 outline-none border-b-2 focus:outline-none focus:shadow-outline focus:border-sky-500">
-          <span class="mt-2 text-xs text-red-500">아이디는 이메일 형식으로 입력해주세요</span>
+          <label class="font-semibold text-sm text-slate-700 pb-1 block">ID</label>
+          <input type="text" placeholder="ID(E-mail)" class="w-full px-3 py-2 mt-1 text-xl leading-tight text-slate-700 outline-none border-b-2 focus:outline-none focus:shadow-outline focus:border-sky-500">
+          <span class="mt-2 text-xs text-red-500 invisible">아이디는 이메일 형식으로 입력해주세요</span>
         </div>
-        <div class="mb-5">
+        <!-- Input Password -->
+        <div class="">
           <label class="font-semibold text-sm text-slate-700 pb-1 block">Password</label>
           <input type="password" placeholder="Password" class="w-full px-3 py-2 mt-1 text-xl leading-tight text-slate-700 outline-none border-b-2 focus:outline-none focus:shadow-outline focus:border-sky-500">
-          <span class="mt-2 text-xs text-red-500">비밀번호는 영문 대문자 + 소문자 + 특수문자 + 숫자가 각 2자리 이상 들어가야합니다</span>
+          <span class="mt-2 text-xs text-red-500 invisible">비밀번호 규칙에 맞지 않습니다</span>
         </div>
-        <button type="button"
-                onclick="location.href='./index.html';"
-                class="transition duration-200 bg-blue-500 hover:bg-blue-600 focus:bg-blue-700 focus:shadow-sm focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 text-white w-full py-2.5 rounded text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block">
-          <span class="inline-block mr-2">Login</span>
-        </button>
+        <!-- Save ID -->
+        <div class="mb-5">
+          <label class="inline-flex items-center cursor-pointer">
+            <input type="checkbox" class="h-5 w-5 text-sky-500 cursor-pointer" checked><span class="ml-2 text-slate-700 text-sm font-semibold">Save ID</span>
+          </label>
+        </div>
         
-        <div class="py-5">
-          <div class="text-left whitespace-nowrap">
-            <i class="fas fa-unlock"></i>
-            <span class="inline-block ml-1">Forgot Password</span>
+        <!-- Login Button -->
+        <div class="mb-5">
+          <input type="button"
+                 onclick="location.href='./index.html';"
+                 value="Login"
+                 class="transition duration-200 cursor-pointer bg-sky-500 hover:bg-sky-600 focus:bg-sky-700 focus:shadow-sm focus:ring-4 focus:ring-sky-500 focus:ring-opacity-50 text-white w-full py-3 rounded text-sm shadow-sm hover:shadow-md font-semibold text-center inline-block outline-none" />
+        </div>
+        <div class="">
+          <div class="text-left whitespace-nowrap text-sm text-slate-700">
+            <span class="ml-2 hover:underline cursor-pointer"><i class="fas fa-unlock mr-2"></i>Forgot Password</span>
           </div>
         </div>
       </div>
