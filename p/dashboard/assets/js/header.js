@@ -52,7 +52,7 @@ const headerHTML = `
     <div class="invisible md:visible fixed top-14 right-2 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
-        <a href="${documentRoot}login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
     <!-- Mobile -->
@@ -60,7 +60,7 @@ const headerHTML = `
       <!-- Personal Menu -->
       <ul class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
-        <a href="${documentRoot}login.html"><li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        <a href="${documentRoot}login/login.html"><li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
   </div>
