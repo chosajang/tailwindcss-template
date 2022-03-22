@@ -24,16 +24,16 @@ const headerHTML = `
     <!-- Web -->
     <div class="invisible md:visible fixed top-14 left-48 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
-        <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Dashboard</li>
-        <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
+        <a href="${documentRoot}settings/index.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-gear mr-2"></i><span>Settings</span></li></a>
+        <a href="${documentRoot}default/index.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-circle-nodes mr-2"></i></i><span>Resources</span></li></a>
       </ul>
     </div>
     <!-- mobile -->
     <div class="visible md:invisible fixed top-12 left-0 w-full bg-white border-b z-20">
       <!-- Personal Menu -->
       <ul class="select-none">
-        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Settings</li>
-        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600">Resources</li>
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-gear mr-2"></i><span>Settings</span></li>
+        <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-circle-nodes mr-2"></i><span>Resources</span></li>
       </ul>
     </div>
   </div>
@@ -45,7 +45,7 @@ const headerHTML = `
   <div id="btn-personal-menu" class="flex flex-none px-2 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
     <span class="hidden md:flex text-xs font-bold mr-4">Jonny</span>
     <!--<i class="fas fa-cog text-sm"></i>-->
-    <img src="./assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
+    <img src="${documentRoot}assets/images/man.png" class="h-8 w-8 rounded bg-blue-200" alt="profile">
   </div>
   <div id="personal-menu" class="hidden">
     <!-- Web -->
