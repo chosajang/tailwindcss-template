@@ -49,7 +49,7 @@ const asideHTML = `
 <!-- Left Menu : ED -->
 `;
 
-/**
+/*
  * DOM 트리 완성 후 실행
  */
 document.addEventListener("DOMContentLoaded", function(){

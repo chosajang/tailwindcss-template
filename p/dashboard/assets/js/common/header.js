@@ -16,15 +16,15 @@ const headerHTML = `
 <div class="flex flex-initial md:flex-auto items-center z-11 h-12">
   <!-- Projects Menu Button -->
   <div id="btn-projects-menu" class="flex flex-none px-4 h-12 items-center cursor-pointer hover:text-sky-600 hover:bg-sky-50 duration-200 hover:border-b hover:border-slate-200">
-    <i class="fa-solid fa-layer-group md:text-sm"></i>
-    <span class="hidden md:inline-flex ml-1 text-xs font-bold">Projects</span>
+    <i class="fa-solid fa-layer-group md:text-sm mr-2"></i>
+    <span class="hidden md:inline-flex text-xs font-bold">Projects</span>
   </div>
   <!-- Projects Menu -->
   <div id="projects-menu" class="hidden">
     <!-- Web -->
     <div class="invisible md:visible fixed top-14 left-48 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
-        <a href="${documentRoot}settings/index.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-gear mr-2"></i><span>Settings</span></li></a>
+        <a href="${documentRoot}auth/otp.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-gear mr-2"></i><span>Settings</span></li></a>
         <a href="${documentRoot}default/index.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fa-solid fa-circle-nodes mr-2"></i></i><span>Resources</span></li></a>
       </ul>
     </div>
@@ -52,7 +52,7 @@ const headerHTML = `
     <div class="invisible md:visible fixed top-14 right-2 w-40 rounded-sm bg-white shadow-lg z-20 border border-top-none border-solid border-gray-300">
       <ul class="w-full text-sm select-none">
         <li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
-        <a href="${documentRoot}login/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        <a href="${documentRoot}auth/login.html"><li class="pl-2 py-2 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
     <!-- Mobile -->
@@ -60,7 +60,7 @@ const headerHTML = `
       <!-- Personal Menu -->
       <ul class="select-none">
         <li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-user-circle"></i> Profile</li>
-        <a href="${documentRoot}login/login.html"><li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
+        <a href="${documentRoot}auth/login.html"><li class="p-3 cursor-pointer hover:bg-sky-50 hover:text-sky-600"><i class="fas fa-sign-out-alt"></i> Logout</li></a>
       </ul>
     </div>
   </div>
