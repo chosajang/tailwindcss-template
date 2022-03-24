@@ -2,12 +2,16 @@ const asideHTML = `
 <!-- Left Menu : ST -->
 <div id="sidebar-wrapper" class="min-h-max overflow-x-hidden">
   <ul class="select-none mt-4">
-    <li title="대시보드" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
-      <i class="fas fa-columns w-4 mr-2"></i><span>대시보드</span>
-    </li>
-    <li title="계정 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
-      <i class="fa-solid fa-user w-4 mr-2"></i><span>계정 관리</span>
-    </li>
+    <a href="${documentRoot}settings/">
+      <li title="대시보드" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+        <i class="fas fa-columns w-4 mr-2"></i><span>대시보드</span>
+      </li>
+    </a>
+    <a href="${documentRoot}settings/account/">
+      <li title="계정 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+        <i class="fa-solid fa-user w-4 mr-2"></i><span>계정 관리</span>
+      </li>
+    </a>
     <li title="그룹 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fa-solid fa-clone w-4 mr-2"></i><span>그룹 관리</span>
 <!--      <div class="relative mx-2">-->
@@ -114,7 +118,7 @@ document.addEventListener("DOMContentLoaded", function(){
   // Collapse Sidebar Event
   const contentWrapperObj = document.getElementById("content-wrapper");
   const collapseObj = document.getElementById("collapse");
-  const menuTextListObj = document.querySelectorAll("#sidebar-wrapper > ul > li > span,#collapse > span");
+  const menuTextListObj = document.querySelectorAll("#sidebar-wrapper > ul > li > span,#collapse > span,#sidebar-wrapper > ul > a > li > span");
   const sidebarChildListObj = document.querySelectorAll("#sidebar-wrapper > ul > li > div");
   const collapseIconObj = document.querySelector("#sidebar-wrapper > div > div > i");
 
