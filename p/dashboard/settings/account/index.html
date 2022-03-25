@@ -48,6 +48,18 @@
             <!-- Title -->
             <div class="border-b mb-4 py-1"><p class="text-base font-bold">계정 목록</p></div>
             
+            <!-- Search Form -->
+            <div class="flex mb-4">
+              <!-- Todo : 그룹 목록 추가 -->
+              <input type="text" list="accounts" placeholder="이름, 아이디 검색" class="h-8 flex-none text-sm text-slate-700 rounded appearance-none border border-slate-500 focus:border focus:outline-none focus:border-green-500 mr-2" >
+              <datalist id="accounts">
+                <option value="테스터(tester)"></option>
+                <option value="테스터01(tester01)"></option>
+                <option value="테스터02(tester02)"></option>
+              </datalist>
+              <input type="button" value="검색" class="h-8 rounded flex shadow bg-sky-500 px-6 text-white hover:bg-sky-600" />
+            </div>
+            
             <!-- Contents -->
             <table class="w-full table-auto mb-6">
               <thead>
@@ -62,7 +74,7 @@
               <tbody class="text-sm font-bold text-slate-700 text-center">
                 <tr>
                   <th class="p-2">1</th>
-                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">이름(id)</a></td>
+                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">테스터(tester)</a></td>
                   <td class="p-2 hidden md:table-cell">test@test.com</td>
                   <td class="p-2 hidden md:table-cell">000-0000-0000</td>
                   <td class="p-2 hidden md:table-cell">
@@ -72,7 +84,7 @@
 
                 <tr>
                   <th class="p-2">2</th>
-                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">이름(id1)</a></td>
+                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">테스터01(tester01)</a></td>
                   <td class="p-2 hidden md:table-cell">test1@test.com</td>
                   <td class="p-2 hidden md:table-cell">000-0000-0000</td>
                   <td class="p-2 hidden md:table-cell">
@@ -82,7 +94,7 @@
 
                 <tr>
                   <th class="p-2">3</th>
-                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">이름(id2)</a></td>
+                  <td class="p-2"><a href="#" class="text-sky-600 hover:underline">테스터02(tester02)</a></td>
                   <td class="p-2 hidden md:table-cell">test2@test.com</td>
                   <td class="p-2 hidden md:table-cell">000-0000-0000</td>
                   <td class="p-2 hidden md:table-cell">
@@ -92,7 +104,7 @@
 
                 <tr>
                   <th class="p-2">4</th>
-                  <td class="p-2">김탈퇴(byebye) <span class="text-red-500 ml-2 text-xs">*탈퇴 후 60일이 안지난 계정</span></td>
+                  <td class="p-2">김탈퇴(byebye) <span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 안지난 계정</span></td>
                   <td class="p-2 hidden md:table-cell blur-sm">test3@test.com</td>
                   <td class="p-2 hidden md:table-cell blur-sm">000-0000-0000</td>
                   <td class="p-2 hidden md:table-cell">
@@ -102,11 +114,11 @@
 
                 <tr>
                   <th class="p-2">5</th>
-                  <td class="p-2">Unknown <span class="text-red-500 ml-2 text-xs">*탈퇴 후 60일이 지난 계정</span></td>
+                  <td class="p-2">Unknown <span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 지난 계정</span></td>
                   <td class="p-2 hidden md:table-cell">-</td>
                   <td class="p-2 hidden md:table-cell">-</td>
                   <td class="p-2 hidden md:table-cell">
-                    <span class="rounded py-1 px-2 bg-slate-900 text-slate-100 text-xs">탈퇴</span>
+                    <span class="rounded py-1 px-2 bg-red-700 text-slate-100 text-xs">삭제</span>
                   </td>
                 </tr>
               </tbody>
