@@ -51,13 +51,18 @@
             <!-- Search Form -->
             <div class="flex mb-4">
               <!-- Todo : 그룹 목록 추가 -->
-              <input type="text" list="accounts" placeholder="이름, 아이디 검색" class="h-8 flex-none text-sm text-slate-700 rounded appearance-none border border-slate-500 focus:border focus:outline-none focus:border-green-500 mr-2" >
-              <datalist id="accounts">
-                <option value="테스터(tester)"></option>
-                <option value="테스터01(tester01)"></option>
-                <option value="테스터02(tester02)"></option>
-              </datalist>
-              <input type="button" value="검색" class="h-8 rounded flex shadow bg-sky-500 px-6 text-white hover:bg-sky-600" />
+              <div class="flex flex-auto">
+                <input type="text" list="accounts" placeholder="이름, 아이디 검색" class="h-8 flex-none text-sm text-slate-700 rounded appearance-none border border-slate-500 focus:border focus:outline-none focus:border-green-500 mr-2" >
+                <datalist id="accounts">
+                  <option value="테스터(tester)"></option>
+                  <option value="테스터01(tester01)"></option>
+                  <option value="테스터02(tester02)"></option>
+                </datalist>
+                <input type="button" value="검색" class="h-8 rounded flex shadow bg-sky-500 px-6 text-white hover:bg-sky-600" />
+              </div>
+              <div class="flex-none">
+                <input type="button" value="계정생성" onclick="location.href='./create.html'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200">
+              </div>
             </div>
             
             <!-- Contents -->
