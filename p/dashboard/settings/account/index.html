@@ -68,7 +68,7 @@
             <!-- Contents -->
             <table class="w-full table-auto mb-6">
               <thead>
-                <tr class="text-sm text-slate-700">
+                <tr class="text-sm text-slate-700 border-b border-gray-200">
                   <th class="p-2 rounded-tl rounded-bl"></th>
                   <th class="p-2">이름(아이디)</th>
                   <th class="p-2 hidden md:table-cell">이메일</th>
@@ -77,52 +77,52 @@
                 </tr>
               </thead>
               <tbody class="text-sm font-bold text-slate-700 text-center">
-                <tr>
-                  <th class="p-2">1</th>
-                  <td class="p-2"><a href="./read.html" class="text-sky-600 hover:underline">테스터(tester)</a></td>
-                  <td class="p-2 hidden md:table-cell">test@test.com</td>
-                  <td class="p-2 hidden md:table-cell">000-0000-0000</td>
-                  <td class="p-2 hidden md:table-cell">
+                <tr class="border-b border-gray-200 bg-sky-50">
+                  <th class="py-4">1</th>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">테스터(tester)</a></td>
+                  <td class="hidden md:table-cell">test@test.com</td>
+                  <td class="hidden md:table-cell">000-0000-0000</td>
+                  <td class="hidden md:table-cell">
                     <span class="rounded py-1 px-2 bg-blue-500 text-white text-xs">승인</span>
                   </td>
                 </tr>
 
-                <tr>
-                  <th class="p-2">2</th>
-                  <td class="p-2"><a href="./read.html" class="text-sky-600 hover:underline">테스터01(tester01)</a></td>
-                  <td class="p-2 hidden md:table-cell">test1@test.com</td>
-                  <td class="p-2 hidden md:table-cell">000-0000-0000</td>
-                  <td class="p-2 hidden md:table-cell">
+                <tr class="border-b border-gray-200">
+                  <th class="py-4">2</th>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">테스터01(tester01)</a></td>
+                  <td class="hidden md:table-cell">test01@test.com</td>
+                  <td class="hidden md:table-cell">000-0000-0000</td>
+                  <td class="hidden md:table-cell">
                     <span class="rounded py-1 px-2 bg-blue-500 text-white text-xs">승인</span>
                   </td>
                 </tr>
 
-                <tr>
-                  <th class="p-2">3</th>
-                  <td class="p-2"><a href="./read.html" class="text-sky-600 hover:underline">테스터02(tester02)</a></td>
-                  <td class="p-2 hidden md:table-cell">test2@test.com</td>
-                  <td class="p-2 hidden md:table-cell">000-0000-0000</td>
-                  <td class="p-2 hidden md:table-cell">
-                    <span class="rounded py-1 px-2 bg-gray-500 text-slate-100 text-xs">대기</span>
+                <tr class="border-b border-gray-200 bg-sky-50">
+                  <th class="py-4">2</th>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">테스터01(tester01)</a></td>
+                  <td class="hidden md:table-cell">test01@test.com</td>
+                  <td class="hidden md:table-cell">000-0000-0000</td>
+                  <td class="hidden md:table-cell">
+                    <span class="rounded py-1 px-2 bg-blue-500 text-white text-xs">승인</span>
+                  </td>
+                </tr>
+                
+                <tr class="border-b border-gray-200">
+                  <th class="py-4">2</th>
+                  <td class="text-left"><span class="ml-4">김탈퇴(byebye)</span><span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 안지난 계정</span></td>
+                  <td class="hidden md:table-cell blur-sm">test03@test.com</td>
+                  <td class="hidden md:table-cell blur-sm">000-0000-0000</td>
+                  <td class="hidden md:table-cell">
+                    <span class="rounded py-1 px-2 bg-gray-600 text-slate-100 text-xs">탈퇴</span>
                   </td>
                 </tr>
 
-                <tr>
-                  <th class="p-2">4</th>
-                  <td class="p-2">김탈퇴(byebye) <span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 안지난 계정</span></td>
-                  <td class="p-2 hidden md:table-cell blur-sm">test3@test.com</td>
-                  <td class="p-2 hidden md:table-cell blur-sm">000-0000-0000</td>
-                  <td class="p-2 hidden md:table-cell">
-                    <span class="rounded py-1 px-2 bg-slate-900 text-slate-100 text-xs">탈퇴</span>
-                  </td>
-                </tr>
-
-                <tr>
-                  <th class="p-2">5</th>
-                  <td class="p-2">Unknown <span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 지난 계정</span></td>
-                  <td class="p-2 hidden md:table-cell">-</td>
-                  <td class="p-2 hidden md:table-cell">-</td>
-                  <td class="p-2 hidden md:table-cell">
+                <tr class=" border-b border-gray-200 bg-sky-50">
+                  <th class="py-4">5</th>
+                  <td class="text-left"><span class="ml-4">Unknown</span><span class="text-red-500 ml-2 text-xs">* 탈퇴 후 60일이 지난 계정</span></td>
+                  <td class="hidden md:table-cell">-</td>
+                  <td class="hidden md:table-cell">-</td>
+                  <td class="hidden md:table-cell">
                     <span class="rounded py-1 px-2 bg-red-700 text-slate-100 text-xs">삭제</span>
                   </td>
                 </tr>
@@ -130,12 +130,12 @@
             </table>
             
             <!-- Pagination -->
-            <div class="flex items-center justify-center py-4">
+            <div class="flex items-center justify-end py-4">
               <ul class="flex text-sm text-slate-700">
                 <li class="mr-3 py-2 disabled">
                   <a class="py-2 px-3 rounded hover:bg-gray-200">Prev</a>
                 </li>
-                <li class="mx-1 px-3 py-2 font-bold text-slate-100 bg-sky-600 rounded">1</li>
+                <li class="mx-1 px-3 py-2 font-bold text-slate-100 bg-sky-600 rounded-full">1</li>
                 <li class="mx-1 px-3 py-2 font-bold rounded hover:bg-gray-200">2</li>
                 <li class="mx-1 px-3 py-2 font-bold rounded hover:bg-gray-200">3</li>
                 <li class="mx-1 px-3 py-2 font-bold rounded hover:bg-gray-200">4</li>
