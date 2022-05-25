@@ -4,6 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="https://kit.fontawesome.com/ae44a18df9.js" crossorigin="anonymous"></script>
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@2.15.1/dist/full.css" rel="stylesheet" type="text/css" />
     <script src="https://cdn.tailwindcss.com"></script>
     <title>TEST</title>
     <link rel="icon" href="/p/dashboard/assets/images/favicon.ico">
@@ -25,7 +26,7 @@
     </header>
     <!-- Content -->
     <div class="border bg-gray-200 m-auto max-w-screen-lg p-4">
-        <div class="table-cell h-20 align-bottom">TEXT</div>
+        <div class="table-cell h-20 align-top">TEXT</div>
         
         <div class="flex border border-red-500 border-dashed">
             <div class="h-20 w-20 bg-gray-300 flex items-center justify-center">1</div>
@@ -36,6 +37,24 @@
             <div class="h-20 w-20 bg-gray-300 flex items-center justify-center">6</div>
         </div>
 
+        <div>
+            <button class="btn">Button</button>
+
+            <!-- The button to open modal -->
+            <label for="my-modal" class="btn modal-button">open modal</label>
+
+            <!-- Put this part before </body> tag -->
+            <input type="checkbox" id="my-modal" class="modal-toggle" />
+            <div class="modal">
+                <div class="modal-box">
+                    <h3 class="font-bold text-lg">Congratulations random Interner user!</h3>
+                    <p class="py-4">You've been selected for a chance to get one year of subscription to use Wikipedia for free!</p>
+                    <div class="modal-action">
+                        <label for="my-modal" class="btn">Yay!</label>
+                    </div>
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 </html>
