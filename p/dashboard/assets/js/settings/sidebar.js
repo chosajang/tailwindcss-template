@@ -12,8 +12,9 @@ const asideHTML = `
         <i class="fa-solid fa-user w-4 mr-2"></i><span>계정 관리</span>
       </li>
     </a>
-    <li title="그룹 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
-      <i class="fa-solid fa-clone w-4 mr-2"></i><span>그룹 관리</span>
+    <a href="${documentRoot}settings/group">
+      <li title="그룹 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+        <i class="fa-solid fa-clone w-4 mr-2"></i><span>그룹 관리</span>
 <!--      <div class="relative mx-2">-->
 <!--        <div class="bg-black text-white text-xs rounded py-1 px-4 right-0 bottom-full">-->
 <!--          Tooltip center-->
@@ -22,7 +23,8 @@ const asideHTML = `
 <!--          </svg>-->
 <!--        </div>-->
 <!--      </div>-->
-    </li>
+      </li>
+    </a>
     <li title="고급 설정" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fa-solid fa-gears w-4 mr-2"></i><span>고급 설정</span>
       <!-- 하위 메뉴 -->
