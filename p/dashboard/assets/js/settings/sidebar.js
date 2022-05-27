@@ -1,6 +1,6 @@
 const asideHTML = `
 <!-- Left Menu : ST -->
-<div id="sidebar-wrapper" class="min-h-max overflow-x-hidden">
+<div id="sidebar-wrapper" class="min-h-max">
   <ul class="select-none mt-4">
     <a href="${documentRoot}settings/">
       <li title="대시보드" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
@@ -25,10 +25,10 @@ const asideHTML = `
 <!--      </div>-->
       </li>
     </a>
-    <li title="고급 설정" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+    <li title="고급 설정" class="py-3 pl-4 text-xs relative cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
       <i class="fa-solid fa-gears w-4 mr-2"></i><span>고급 설정</span>
       <!-- 하위 메뉴 -->
-      <div class="hidden fixed left-52 top-28 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
+      <div class="hidden absolute left-52 -top-6 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
         <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">고급 설정</div>
         <ul class="m-1">
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">인증 설정</li>
