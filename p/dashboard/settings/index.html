@@ -46,7 +46,7 @@
           <!-- 전체 회원 수 -->
           <div class="col-span-12 md:col-span-3">
             <div class="flex flex-row p-4">
-              <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-lg bg-sky-500 text-white">
+              <div class="flex items-center justify-center flex-shrink-0 h-12 w-12 rounded-lg bg-sky-500 text-white" onclick="testFunc()">
                 <i class="fas fa-users text-lg"></i>
               </div>
               <div class="flex flex-col flex-grow ml-4">
@@ -100,4 +100,15 @@
   
   </main><!--// Main : ED -->
 </body>
+<script>
+  const bc = new BroadcastChannel('test_channel');
+  bc.onmessage = event => { console.log(event.data); }
+
+  // bc.close();
+
+  function testFunc() {
+    const testMessage = 'Message - ' + Math.random().toString(36).substring(2, 11);
+    bc.postMessage( testMessage );
+  }
+</script>
 </html>
