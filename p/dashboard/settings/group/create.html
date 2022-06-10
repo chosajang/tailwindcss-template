@@ -1,0 +1,96 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://kit.fontawesome.com/ae44a18df9.js" crossorigin="anonymous"></script>
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <title>Settings</title>
+  <link rel="icon" href="/p/dashboard/assets/images/favicon.ico">
+
+  <!-- Layout JS -->
+  <script src="/p/dashboard/assets/js/common/common.js"></script>
+  <script src="/p/dashboard/assets/js/common/header.js" defer ></script>
+  <script src="/p/dashboard/assets/js/settings/sidebar.js" defer ></script>
+  <script src="/p/dashboard/assets/js/settings/accounts/read.js" defer ></script>
+</head>
+<body class="w-full font-sans pb-40">
+<header id="header"></header>
+
+<!-- Main : ST -->
+<main class="w-full min-h-full">
+  <!-- Sidebar : ST -->
+  <aside id="sidebar"></aside>
+  <!-- Sidebar : ST -->
+
+  <!-- Contents : ST -->
+  <div id="content-wrapper" class="duration-200 md:ml-52">
+    <div id="contents" class="container max-w-screen-lg bg-white m-auto px-4 py-4 md:px-6 duration-300">
+      <!-- Rows : Breadcrumb -->
+      <div class="pb-2 mb-6 border-b">
+        <nav class="text-xs text-slate-700">
+          <ul class="flex">
+            <li class="hover:underline cursor-pointer"><i class="fa-solid fa-gear mr-2"></i>설정 관리</li>
+            <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
+            <li class="hover:underline cursor-pointer">그룹 관리</li>
+            <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
+            <li class="hover:underline cursor-pointer">그룹 조회</li>
+          </ul>
+        </nav>
+      </div>
+
+      <!-- Rows : Account Detail -->
+      <div class="mb-6 py-1 pb-10">
+
+        <!-- 페이지 제목 -->
+        <div class="mb-6 py-1"><p class="text-2xl font-bold">그룹 정보</p></div>
+
+        <!-- Account Detail -->
+        <div class="flex flex-col min-w-full">
+          <!-- 기본 정보 -->
+          <div class="grid grid-cols-1 gap-4 md:grid-cols-3 items-center justify-center border-b border-gray-200 pb-6">
+            <div class="col-start-1 md:col-span-2">
+              <div class="text-lg font-bold">기본 정보</div>
+              <div class="text-xs mt-2">그룹에 대한 기본 정보를 설정합니다</div>
+            </div>
+            <div class="col-start-1 col-span-2 mb-2">
+              <span class="block text-sm text-slate-800 font-semibold">그룹명</span>
+              <input type="text" required="required" placeholder="그룹명" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+            </div>
+            <div class="col-start-1 col-span-2 mb-2">
+              <span class="block text-sm text-slate-800 font-semibold">그룹 설명</span>
+              <input type="text" required="required" placeholder="그룹 설명" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+            </div>
+          </div>
+
+          <!-- 버튼 -->
+          <div class="mt-6">
+            <input type="button" value="등록하기" onclick="location.href='./read.html'" class="rounded py-1 px-6 cursor-pointer text-white mr-2 bg-blue-500 hover:bg-blue-600 duration-200">
+            <input type="button" value="목록" onclick="location.href='./'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200">
+          </div>
+        </div>
+
+      </div>
+
+
+    </div><!--// <div class="container m-auto p-4 md:p-6"> -->
+  </div><!--// Contents : ED -->
+
+</main><!--// Main : ED -->
+</body>
+<script>
+  // window.addEventListener('beforeunload', (event) => {
+  //   event.preventDefault();
+  //   let now = new Date();
+  //   localStorage.setItem("beforeunload", now);
+  //   event.returnValue = '';
+  // });
+  //
+  // window.addEventListener('unload', (event) => {
+  //   event.preventDefault();
+  //   let now = new Date();
+  //   localStorage.setItem("unload", now);
+  // });
+</script>
+</html>
