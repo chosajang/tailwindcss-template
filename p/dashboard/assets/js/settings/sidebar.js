@@ -31,7 +31,7 @@ const asideHTML = `
       <div class="hidden absolute left-52 -top-6 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
         <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">고급 설정</div>
         <ul class="m-1">
-          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">인증 설정</li>
+          <a href="${documentRoot}settings/advanced/auth/"><li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">인증 설정</li></a>
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">페이지 설정</li>
           <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">API 설정</li>
         </ul>
