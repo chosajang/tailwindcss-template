@@ -36,7 +36,9 @@
             <ul class="flex">
               <li class="hover:underline cursor-pointer"><i class="fa-solid fa-gear mr-2"></i>설정 관리</li>
               <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
-              <li class="hover:underline cursor-pointer">그룹 관리</li>
+              <li class="hover:underline cursor-pointer">고급 설정</li>
+              <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
+              <li class="hover:underline cursor-pointer">페이지 관리</li>
             </ul>
           </nav>
         </div>
@@ -47,20 +49,18 @@
           <div class="col-span-12">
             <!-- Breadcrumb -->
             <div class="flex border-b mb-4 py-1">
-              <div class="grow"><span class="inline-block align-text-bottom font-bold pt-2">그룹 목록</span></div>
-              <div class="flex-none"><input type="button" value="그룹 생성" onclick="location.href='./create.html'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200"></div>
+              <div class="grow"><span class="inline-block align-text-bottom font-bold pt-2">페이지 목록</span></div>
+              <div class="flex-none"><input type="button" value="페이지 생성" onclick="location.href='./create.html'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200"></div>
             </div>
 
             <!-- Title -->
             <div class="flex mb-4">
               <!-- Search Form -->
               <div class="flex flex-auto">
-                <input type="text" list="accounts" placeholder="그룹 검색" class="h-8 flex-none text-sm text-slate-700 rounded appearance-none border border-slate-500 focus:border focus:outline-none focus:border-green-500 mr-2" >
+                <input type="text" list="accounts" placeholder="페이지 검색" class="h-8 flex-none text-sm text-slate-700 rounded appearance-none border border-slate-500 focus:border focus:outline-none focus:border-green-500 mr-2" >
                 <datalist id="accounts">
-                  <option value="개발1팀"/>
-                  <option value="개발2팀"/>
-                  <option value="운영1팀"/>
-                  <option value="운영2팀"/>
+                  <option value="자원 관리 > 대시보드"/>
+                  <option value="자원 관리 > 서버 관리"/>
                 </datalist>
                 <input type="button" value="검색" class="h-8 rounded flex shadow bg-sky-500 px-6 text-white hover:bg-sky-600" />
               </div>
@@ -83,28 +83,28 @@
               <thead>
                 <tr class="text-sm text-slate-700 border-b border-gray-200">
                   <th class="p-2 "></th>
-                  <th class="p-2">그룹명(그룹원 수)</th>
+                  <th class="p-2">페이지 명</th>
                 </tr>
               </thead>
               <tbody class="text-sm font-bold text-slate-700 text-center">
                 <tr class="border-b border-gray-200">
                   <th class="py-4">1</th>
-                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">개발1팀</a><span class="ml-1 text-xs">(10명)</span></td>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">자원관리 > 대시보드</a></td>
                 </tr>
 
                 <tr class="border-b border-gray-200">
                   <th class="py-4">2</th>
-                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">개발2팀</a><span class="ml-1 text-xs">(10명)</span></td>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">자원관리 > 서버 관리</a></td>
                 </tr>
 
                 <tr class="border-b border-gray-200">
                   <th class="py-4">3</th>
-                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">운영1팀</a><span class="ml-1 text-xs">(10명)</span></td>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">자원관리 > 서버 관리 > 서버 상세 정보</a></td>
                 </tr>
 
                 <tr class="border-b border-gray-200">
                   <th class="py-4">4</th>
-                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">운영2팀</a><span class="ml-1 text-xs">(10명)</span></td>
+                  <td class="text-left"><a href="./read.html" class="ml-4 text-sky-600 hover:underline">자원관리 > 스위치 관리</a></td>
                 </tr>
 
               </tbody>

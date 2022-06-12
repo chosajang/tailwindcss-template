@@ -33,9 +33,11 @@
           <ul class="flex">
             <li class="hover:underline cursor-pointer"><i class="fa-solid fa-gear mr-2"></i>설정 관리</li>
             <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
-            <li class="hover:underline cursor-pointer">계정 관리</li>
+            <li class="hover:underline cursor-pointer">고급 설정</li>
             <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
-            <li class="hover:underline cursor-pointer">계정 조회</li>
+            <li class="hover:underline cursor-pointer">API 관리</li>
+            <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
+            <li class="hover:underline cursor-pointer">API 조회</li>
           </ul>
         </nav>
       </div>
@@ -44,57 +46,51 @@
       <div class="mb-6 py-1 pb-10">
 
         <!-- 페이지 제목 -->
-        <div class="mb-6 py-1"><p class="text-2xl font-bold">계정 정보</p></div>
+        <div class="mb-6 py-1"><p class="text-2xl font-bold">그룹 정보</p></div>
 
         <!-- 탭 메뉴 -->
         <div class="flex min-w-full border-b border-b-slate-300 mb-6">
-          <div class="py-2 pl-4 border-b-2 border-b-white cursor-pointer hover:border-b-slate-400 duration-200 hover:border-b-slate-400 after:ml-4 after:border-r after:border-r-slate-300" onclick="location.href='./read.html'">기본 정보</div>
-<!--          <div class="my-2 border-r border-r-slate-300"></div>-->
-          <div class="py-2 pl-4 border-b-2 border-b-slate-400 cursor-pointer hover:border-b-slate-400 duration-200 after:ml-4 after:border-r after:border-r-slate-300">그룹 설정</div>
-<!--          <div class="my-2 border-r border-r-slate-300"></div>-->
-          <div class="py-2 px-4 border-b-2 border-b-white cursor-pointer hover:border-b-slate-400 duration-200" onclick="location.href='./read02.html'">페이지 권한</div>
+          <div class="py-2 pl-4 border-b-2 border-b-slate-400 cursor-pointer hover:border-b-slate-400 duration-200 after:ml-4 after:border-r after:border-r-slate-300">API 정보</div>
+          <div class="py-2 px-4 border-b-2 border-b-white cursor-pointer hover:border-b-slate-400 duration-200"  onclick="location.href='./read01.html';">페이지 설정</div>
         </div>
 
         <!-- Account Detail -->
         <div class="flex flex-col min-w-full">
           <!-- 기본 정보 -->
+          <!-- 기본 정보 -->
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3 items-center justify-center border-b border-gray-200 pb-6">
             <div class="col-start-1 md:col-span-2">
-              <div class="text-lg font-bold">그룹 정보</div>
-              <div class="text-xs mt-2">해당 회원이 속할 그룹 정보를 설정합니다</div>
+              <div class="text-lg font-bold">API 정보</div>
+              <div class="text-xs mt-2">페이지에서 사용할 API 정보를 등록합니다</div>
             </div>
-
-            <div class="col-start-1 md:col-span-2">
-              <ul>
-
-                <li class="flex items-center rounded hover:bg-gray-100 duration-200">
-                  <label class="inline-flex items-center cursor-pointer p-2 ml-4 w-full">
-                    <input type="checkbox" class="h-5 w-5 accent-blue-600" ><span class="ml-2 text-slate-700">개발1팀</span>
-                  </label>
-                </li>
-                <li class="flex items-center rounded hover:bg-gray-100 duration-200">
-                  <label class="inline-flex items-center cursor-pointer p-2 ml-4 w-full">
-                    <input type="checkbox" class="h-5 w-5 accent-blue-600" ><span class="ml-2 text-slate-700">개발2팀</span>
-                  </label>
-                </li>
-                <li class="flex items-center rounded hover:bg-gray-100 duration-200">
-                  <label class="inline-flex items-center cursor-pointer p-2 ml-4 w-full">
-                    <input type="checkbox" class="h-5 w-5 accent-blue-600" ><span class="ml-2 text-slate-700">개발3팀</span>
-                  </label>
-                </li>
-                <li class="flex items-center rounded hover:bg-gray-100 duration-200">
-                  <label class="inline-flex items-center cursor-pointer p-2 ml-4 w-full">
-                    <input type="checkbox" class="h-5 w-5 accent-blue-600" ><span class="ml-2 text-slate-700">개발4팀</span>
-                  </label>
-                </li>
-
-
-              </ul>
+            <div class="col-start-1 col-span-2 mb-2">
+              <div class="block ">
+                <span class="text-sm text-slate-800 font-semibold">API 명</span>
+                <span class="text-xs text-slate-800 ">사전에 정의된 식별 가능한 API 명을 입력합니다</span>
+              </div>
+              <input type="text" required="required" placeholder="페이지명(예 : 계정 목록 API)" value="계정 목록 API" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
             </div>
-
+            <div class="col-start-1 col-span-2 mb-2">
+              <div class="block ">
+                <span class="text-sm text-slate-800 font-semibold">URL 설정</span>
+                <span class="text-xs text-slate-800 ">API 호출 시, 사용하는 url 정보를 입력합니다</span>
+              </div>
+              <input type="text" required="required" placeholder="URL 설정(예 : /employee)" value="/employee" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+            </div>
+            <div class="col-start-1 col-span-2 mb-2">
+              <div class="block ">
+                <span class="text-sm text-slate-800 font-semibold">HTTP Method 설정</span>
+                <span class="text-xs text-slate-800 ">API 식별을 위한 HTTP Mehtod 설정</span>
+              </div>
+              <select class="px-2 py-1 mt-1 text-slate-700 rounded border">
+                <option value="0">post</option>
+                <option value="1">get</option>
+                <option value="2">put</option>
+                <option value="3">patch</option>
+                <option value="4">delete</option>
+              </select>
+            </div>
           </div>
-
-
 
           <!-- 버튼 -->
           <div class="mt-6">

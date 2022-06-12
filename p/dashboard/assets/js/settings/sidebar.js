@@ -15,25 +15,17 @@ const asideHTML = `
     <a href="${documentRoot}settings/group">
       <li title="그룹 관리" class="py-3 pl-4 text-xs cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
         <i class="fa-solid fa-clone w-4 mr-2"></i><span>그룹 관리</span>
-<!--      <div class="relative mx-2">-->
-<!--        <div class="bg-black text-white text-xs rounded py-1 px-4 right-0 bottom-full">-->
-<!--          Tooltip center-->
-<!--          <svg class="absolute text-black h-2 w-full left-0 top-full" viewBox="0 0 255 255">-->
-<!--            <polygon points="100,100 0,0 255,0"/>-->
-<!--          </svg>-->
-<!--        </div>-->
-<!--      </div>-->
       </li>
     </a>
-    <li title="고급 설정" class="py-3 pl-4 text-xs relative cursor-pointer hover:text-sky-600 hover:bg-sky-50 border-r-4 border-transparent hover:border-sky-500">
+    <li title="고급 설정" class="py-3 pl-4 text-xs relative cursor-pointer hover:text-red-600 hover:bg-red-50 border-r-4 border-transparent hover:border-red-500">
       <i class="fa-solid fa-gears w-4 mr-2"></i><span>고급 설정</span>
       <!-- 하위 메뉴 -->
       <div class="hidden absolute left-52 -top-6 w-40 m-1 text-slate-700 text-left bg-white border border-slate-300 rounded shadow transition ease-in-out duration-200">
-        <div class="cursor-default py-2 pl-4 bg-sky-50 text-slate-800 font-bold">고급 설정</div>
+        <div class="cursor-default py-2 pl-4 bg-red-50 text-slate-800 font-bold">고급 설정</div>
         <ul class="m-1">
-          <a href="${documentRoot}settings/advanced/auth/"><li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">인증 설정</li></a>
-          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">페이지 설정</li>
-          <li class="py-2 pl-4 cursor-pointer rounded hover:bg-sky-50 hover:text-sky-600">API 설정</li>
+          <a href="${documentRoot}settings/advanced/auth/"><li class="py-2 pl-4 cursor-pointer rounded hover:bg-red-50 hover:text-red-600">인증 설정</li></a>
+          <a href="${documentRoot}settings/advanced/page/"><li class="py-2 pl-4 cursor-pointer rounded hover:bg-red-50 hover:text-red-600">페이지 설정</li></a>
+          <a href="${documentRoot}settings/advanced/api/"><li class="py-2 pl-4 cursor-pointer rounded hover:bg-red-50 hover:text-red-600">API 설정</li></a>
         </ul>
       </div>
     </li>

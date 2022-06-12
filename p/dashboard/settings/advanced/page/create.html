@@ -33,9 +33,11 @@
           <ul class="flex">
             <li class="hover:underline cursor-pointer"><i class="fa-solid fa-gear mr-2"></i>설정 관리</li>
             <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
-            <li class="hover:underline cursor-pointer">그룹 관리</li>
+            <li class="hover:underline cursor-pointer">고급 설정</li>
             <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
-            <li class="hover:underline cursor-pointer">그룹 조회</li>
+            <li class="hover:underline cursor-pointer">페이지 관리</li>
+            <li class="px-2"><i class="fa-solid fa-angle-right"></i></li>
+            <li class="hover:underline cursor-pointer">페이지 등록</li>
           </ul>
         </nav>
       </div>
@@ -44,23 +46,29 @@
       <div class="mb-6 py-1 pb-10">
 
         <!-- 페이지 제목 -->
-        <div class="mb-6 py-1"><p class="text-2xl font-bold">그룹 정보</p></div>
+        <div class="mb-6 py-1"><p class="text-2xl font-bold">페이지 등록</p></div>
 
         <!-- Account Detail -->
         <div class="flex flex-col min-w-full">
           <!-- 기본 정보 -->
           <div class="grid grid-cols-1 gap-4 md:grid-cols-3 items-center justify-center border-b border-gray-200 pb-6">
             <div class="col-start-1 md:col-span-2">
-              <div class="text-lg font-bold">기본 정보</div>
-              <div class="text-xs mt-2">그룹에 대한 기본 정보를 설정합니다</div>
+              <div class="text-lg font-bold">페이지 정보</div>
+              <div class="text-xs mt-2">페이지 기본 정보를 설정합니다</div>
             </div>
             <div class="col-start-1 col-span-2 mb-2">
-              <span class="block text-sm text-slate-800 font-semibold">그룹명</span>
-              <input type="text" required="required" placeholder="그룹명" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+              <div class="block ">
+                <span class="text-sm text-slate-800 font-semibold">페이지명</span>
+                <span class="text-xs text-slate-800 ">사전에 정의된 식별 가능한 페이지명을 입력합니다</span>
+              </div>
+              <input type="text" required="required" placeholder="페이지명(예 : 자원관리 > 대시보드)" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
             </div>
             <div class="col-start-1 col-span-2 mb-2">
-              <span class="block text-sm text-slate-800 font-semibold">그룹 설명</span>
-              <input type="text" required="required" placeholder="그룹 설명" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+              <div class="block ">
+                <span class="text-sm text-slate-800 font-semibold">URL 설정</span>
+                <span class="text-xs text-slate-800 ">사이트 접근 시, 사용하는 url 기반으로 페이지를 분류합니다</span>
+              </div>
+              <input type="text" required="required" placeholder="URL 설정(예 : /resources/dashboard)" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
             </div>
           </div>
 

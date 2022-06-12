@@ -50,31 +50,23 @@
             <!-- 기본 정보 -->
             <div class="grid grid-cols-1 gap-4 md:grid-cols-3 items-center justify-center border-b border-gray-200 pb-6">
               <div class="md:col-start-1 md:col-span-2">
-                <div class="text-lg font-bold">인증 정보</div>
-                <div class="text-xs mt-2">인증 시 필요한 설정 정보를 정의합니다</div>
+                <div class="text-lg font-bold">인증 토큰</div>
+                <div class="text-xs mt-2">JWT 인증 토큰의 TTL(Time to live)을 설정합니다</div>
               </div>
-              <div class="md:col-start-1 md:col-span-2 mb-2">
-                <span class="block text-sm text-slate-800 font-semibold">아이디</span>
-                <input type="text" required="required" placeholder="아이디" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+              <div class="md:col-start-1 md:col-span-1 mb-2">
+                <span class="block text-sm text-slate-800 font-semibold">Access Token TTL(m)</span>
+                <input type="text" required="required" placeholder="TTL(m)" value="60" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
               </div>
-              <div class="md:col-start-1 md:col-span-2 mb-2">
-                <span class="block text-sm text-slate-800 font-semibold">이름</span>
-                <input type="text" required="required" placeholder="이름" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
-              </div>
-              <div class="md:col-start-1 md:col-span-2 mb-2">
-                <span class="block text-sm text-slate-800 font-semibold">이메일</span>
-                <input type="text" required="required" placeholder="이메일(E-mail)" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
-              </div>
-              <div class="md:col-start-1 md:col-span-2 mb-2">
-                <span class="block text-sm text-slate-800 font-semibold">연락처</span>
-                <input type="text" required="required" placeholder="연락처" value="" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
+              <div class="md:col-start-2 md:col-span-1 mb-2">
+                <span class="block text-sm text-slate-800 font-semibold">Refresh Token TTL(m)</span>
+                <input type="text" required="required" placeholder="TTL(m)" value="1440" class="w-full px-5 py-1 mt-1 text-lg text-gray-700 outline-none border-transparent border-1 border-b border-gray-700 hover:border-blue-500 focus:text-blue-500 focus:border-blue-500 focus:bg-white duration-200">
               </div>
             </div>
             
             <!-- 버튼 -->
             <div class="mt-6">
-                <input type="button" value="등록하기" onclick="location.href='./'" class="rounded py-1 px-6 cursor-pointer text-white mr-2 bg-blue-500 hover:bg-blue-600 duration-200">
-                <input type="button" value="취소하기" onclick="location.href='./'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200">
+                <input type="button" value="설정하기" onclick="location.href='./'" class="rounded py-1 px-6 cursor-pointer text-white mr-2 bg-blue-500 hover:bg-blue-600 duration-200">
+<!--                <input type="button" value="취소하기" onclick="location.href='./'" class="rounded py-1 px-6 cursor-pointer border text-slate-700 hover:bg-gray-200 duration-200">-->
             </div>
           </div>
           
